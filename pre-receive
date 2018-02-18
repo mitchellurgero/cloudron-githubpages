@@ -1,0 +1,43 @@
+#!/bin/bash
+
+set -eu
+
+BUILD_PATH="/run/build"
+WEBSITE_PATH="/app/data/website"
+
+while read oldrev newrev refname
+do
+    # Only run this script for the master branch.
+    if [[ $refname = "refs/heads/master" ]] ; then
+        echo "=================================="
+        echo "        Publishing website        "
+        echo "=================================="
+
+        echo "=> Cleanup build path"
+        sudo rm -rf $BUILD_PATH
+        mkdir -p $BUILD_PATH
+
+        echo "=> Checkout repo"
+        git archive $newrev | tar -x -C $BUILD_PATH
+
+        cd $BUILD_PATH
+
+        # Without removing it, the dependencies will be wrong on jekyll build
+        echo "=> Remove Gemfile.lock"
+        rm -f Gemfile.lock
+
+        if [[ -f _config.yml ]]; then
+            echo "=> jekyll build"
+            jekyll build
+
+            echo "=> Publish website"
+            rm -rf $WEBSITE_PATH
+            cp -rf $BUILD_PATH/_site $WEBSITE_PATH
+        else
+            echo "=> Publish website"
+            rm -rf $WEBSITE_PATH
+            cp -rf $BUILD_PATH $WEBSITE_PATH
+        fi
+    fi
+done
+

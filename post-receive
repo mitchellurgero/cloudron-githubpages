@@ -1,5 +1,0 @@
-#!/bin/bash
-
-set -eu
-
-/app/code/build-pages.sh

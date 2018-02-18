@@ -22,7 +22,9 @@ if grep "cloudron-welcome-page" $WEBSITE_PATH/index.html; then
 fi
 
 echo "=> Ensure git hook"
-cp /app/code/post-receive $REPO_PATH/hooks/post-receive
+# cp /app/code/post-receive $REPO_PATH/hooks/post-receive
+rm -f $REPO_PATH/hooks/post-receive
+cp /app/code/pre-receive $REPO_PATH/hooks/pre-receive
 
 echo "=> Ensure permissions"
 chown cloudron:cloudron -R $REPO_PATH /run /app/data
