@@ -11,7 +11,7 @@ RUN gem install --no-document bundler github-pages:177
 COPY package.json /app/code/
 RUN npm install
 
-COPY start.sh index.js post-receive pre-receive welcome.html /app/code/
+COPY start.sh index.js pre-receive welcome.html /app/code/
 
 RUN echo "\ncloudron ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
 
