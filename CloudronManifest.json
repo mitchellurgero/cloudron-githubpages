@@ -23,5 +23,9 @@
     "jekyll",
     "website"
   ],
-  "mediaLinks": [ ]
+  "mediaLinks": [
+    "https://s3.amazonaws.com/cloudron-app-screenshots/github.pages.cloudronapp/9001963d7c482c0f86b4de2795818495b962802b/img0.png",
+    "https://s3.amazonaws.com/cloudron-app-screenshots/github.pages.cloudronapp/9001963d7c482c0f86b4de2795818495b962802b/img1.png",
+    "https://s3.amazonaws.com/cloudron-app-screenshots/github.pages.cloudronapp/9001963d7c482c0f86b4de2795818495b962802b/img2.png"
+  ]
 }
