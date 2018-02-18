@@ -16,4 +16,6 @@ RUN npm install
 
 COPY start.sh index.js build-pages.sh post-receive /app/code/
 
+RUN echo "\ncloudron ALL=(ALL:ALL) NOPASSWD: ALL" >> /etc/sudoers
+
 CMD ["/app/code/start.sh"]
