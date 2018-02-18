@@ -5,17 +5,17 @@
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG",
   "tagline": "One-line description",
-  "version": "0.1.0",
-  "healthCheckPath": "/",
+  "version": "1.0.0",
+  "healthCheckPath": "/_healthcheck",
   "httpPort": 3000,
   "addons": {
     "localstorage": {},
     "ldap": {}
   },
   "manifestVersion": 1,
-  "website": "https://example.com",
+  "website": "https://jekyllrb.com/",
   "contactEmail": "support@cloudron.io",
-  "icon": "",
+  "icon": "file://logo.png",
   "tags": [
     "changeme"
   ],

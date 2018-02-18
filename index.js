@@ -60,7 +60,7 @@ app.use('/.git', function (req, res, next) {
     })).pipe(res);
 });
 
-app.get('/healthcheck', function (req, res) {
+app.get('/_healthcheck', function (req, res) {
     res.status(200).end();
 });
 
