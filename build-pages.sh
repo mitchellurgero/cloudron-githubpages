@@ -7,7 +7,7 @@ echo "Publishing website"
 echo "==================================="
 
 BUILD_PATH="/run/build"
-WEBSITE_PATH="/run/static"
+WEBSITE_PATH="/app/data/website"
 
 echo "=> Cleanup build path"
 sudo rm -rf $BUILD_PATH
