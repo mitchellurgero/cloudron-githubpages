@@ -15,6 +15,7 @@ if [[ ! -d $REPO_PATH ]]; then
     echo "Push to https://blabla" > $WEBSITE_PATH/index.html
 else
     echo "=> Building pages"
+    chown cloudron:cloudron -R $REPO_PATH /run
     /usr/local/bin/gosu cloudron:cloudron /app/code/build-pages.sh
 fi
 
