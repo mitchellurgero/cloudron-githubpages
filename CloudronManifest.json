@@ -1,10 +1,10 @@
 {
   "id": "github.pages.cloudronapp",
   "title": "Github Pages",
-  "author": "Authors name",
+  "author": "Cloudron",
   "description": "file://DESCRIPTION.md",
   "changelog": "file://CHANGELOG",
-  "tagline": "One-line description",
+  "tagline": "Publish webpages from a git repo",
   "version": "1.0.0",
   "healthCheckPath": "/_healthcheck",
   "httpPort": 3000,
@@ -13,11 +13,14 @@
     "ldap": {}
   },
   "manifestVersion": 1,
-  "website": "https://jekyllrb.com/",
+  "website": "https://pages.github.com/",
   "contactEmail": "support@cloudron.io",
   "icon": "file://logo.png",
   "tags": [
-    "changeme"
+    "github",
+    "pages",
+    "jekyll",
+    "website"
   ],
   "mediaLinks": [ ]
 }
