@@ -25,7 +25,7 @@ echo "=> Ensure git hook"
 cp /app/code/post-receive $REPO_PATH/hooks/post-receive
 
 echo "=> Ensure permissions"
-chown cloudron:cloudron -R $REPO_PATH /run
+chown cloudron:cloudron -R $REPO_PATH /run /app/data
 
 echo "=> Run server"
 export REPO_PATH
