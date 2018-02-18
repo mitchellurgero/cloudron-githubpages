@@ -17,6 +17,10 @@ cd $BUILD_PATH
 echo "=> Checkout repo"
 git clone "/app/data/repo.git/" .
 
+# Without removing it, the dependencies will be wrong on jekyll build
+echo "=> Remove Gemfile.lock"
+rm -f Gemfile.lock
+
 if [[ -f _config.yml ]]; then
     echo "=> jekyll build"
     jekyll build
