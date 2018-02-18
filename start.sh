@@ -15,7 +15,7 @@ if [[ ! -d $REPO_PATH ]]; then
     echo "Push to https://blabla" > $WEBSITE_PATH/index.html
 else
     echo "=> Building pages"
-    # /usr/local/bin/gosu cloudron:cloudron /app/code/build-pages.sh
+    /usr/local/bin/gosu cloudron:cloudron /app/code/build-pages.sh
 fi
 
 echo "=> Ensure git hook"
