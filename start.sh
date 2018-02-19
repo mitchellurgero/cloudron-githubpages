@@ -16,7 +16,7 @@ if [[ ! -d $REPO_PATH ]]; then
     cp /app/code/welcome.html $WEBSITE_PATH/index.html
 fi
 
-if grep "cloudron-welcome-page" $WEBSITE_PATH/index.html; then
+if grep "cloudron-welcome-page" $WEBSITE_PATH/index.html > /dev/null; then
     echo "=> Update welcome page"
     sed -e "s,##REPO_URL##,${APP_ORIGIN}/_git/page," /app/code/welcome.html > $WEBSITE_PATH/index.html
 fi
