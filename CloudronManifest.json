@@ -18,6 +18,7 @@
   "contactEmail": "support@cloudron.io",
   "icon": "file://logo.png",
   "tags": [
+    "blog",
     "github",
     "pages",
     "jekyll",
