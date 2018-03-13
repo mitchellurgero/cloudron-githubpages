@@ -3,3 +3,7 @@
 
 [1.0.1]
 * Set LANG and LC_ALL to fix several ruby gems
+
+[1.0.2]
+* Improve app description and category
+
