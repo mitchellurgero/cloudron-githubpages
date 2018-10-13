@@ -1,17 +1,14 @@
-FROM cloudron/base:0.10.0
+FROM cloudron/base:1.0.0@sha256:147a648a068a2e746644746bbfb42eb7a50d682437cead3c67c933c546357617
 
 RUN mkdir -p /app/code
 WORKDIR /app/code
 
-ENV PATH /usr/local/node-6.9.5/bin:$PATH
-
 # Some ruby gems require this to be set
 ENV LANG=en_US.UTF-8
-RUN echo "en_US.UTF-8 UTF-8" > /etc/locale.gen && locale-gen
 ENV LC_ALL=en_US.UTF-8
 
 # https://pages.github.com/versions/
-RUN gem install --no-document bundler github-pages:177
+RUN gem install --no-document bundler github-pages:192
 
 COPY package.json /app/code/
 RUN npm install
