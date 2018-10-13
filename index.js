@@ -38,7 +38,7 @@ app.use('/_git', function (req, res, next) {
     var ldapDn = 'cn=' + userInfo.name + ',' + process.env.LDAP_USERS_BASE_DN;
 
     ldapClient.bind(ldapDn, userInfo.pass, function (error) {
-        if (error) return res.send(403);
+        if (error) return res.sendStatus(403);
 
         next();
     });
