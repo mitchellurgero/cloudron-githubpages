@@ -1,4 +1,4 @@
-This app packages GitHub Pages version <upstream>177</upstream>.
+This app packages GitHub Pages version <upstream>192</upstream>.
 
 GitHub Pages is a Cloudron app for hosting static web pages for GitHub users, user blogs, project documentation or even whole books.
 

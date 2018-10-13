@@ -7,3 +7,6 @@
 [1.0.2]
 * Improve app description and category
 
+[1.1.0]
+* Update to github pages v192
+* Update Cloudron base image to 1.0.0
