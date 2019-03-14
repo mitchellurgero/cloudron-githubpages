@@ -3,7 +3,7 @@
 set -eu
 
 REPO_PATH="/app/data/repo.git"
-WEBSITE_PATH="/app/data/website"
+WEBSITE_PATH="/app/data/website/docs/"
 
 if [[ ! -d $REPO_PATH ]]; then
     echo "=> First run, create bare repo"
